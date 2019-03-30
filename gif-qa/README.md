@@ -14,11 +14,12 @@ original author to share these files.
 2. Second, download TGIF-QA question sets [[here]](https://github.com/YunseokJANG/tgif-qa/tree/master/dataset), 
 and override `data/dataset`.
 
-3. Third, download and extract glove.42B.300d.txt [[here]](http://nlp.stanford.edu/data/glove.42B.300d.zip)
-and move to `data/Vocabulary`. Later when first execute each task, generated vocabulary files will be stored in 
-this folder.
+3. Optionally, download and extract glove.42B.300d.txt [[here]](http://nlp.stanford.edu/data/glove.42B.300d.zip)
+and move to `data/Vocabulary`. We have included our word embeddings initialized with glove300D in this folder, with suffix .pkl. If you
+want to try different embedding initialization, remove .pkl files and execute main.py once to 
+automatically generate new vocabulary files.
 
-4. Optionally you can download original TGIFs and store in `data/gifs`. This helps visualization.
+4. Optionally, you can download original TGIFs and store in `data/gifs`. This helps visualization.
 
 
 
