@@ -7,6 +7,8 @@ from attention_module_lite import *
 from make_tgif import DatasetTGIF
 from util import AverageMeter
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 
 def main(args):
     torch.manual_seed(1)
@@ -73,7 +75,7 @@ def main(args):
     #############################
     word_matrix = train_dataset.word_matrix
     voc_len = word_matrix.shape[0]
-    assert text_embed_size == word_matrix.shape[1]
+    assert text_embed_size==word_matrix.shape[1]
     
     #############################
     # Parameters
@@ -85,9 +87,11 @@ def main(args):
 
     train_iter = train_dataset.batch_iter(args.num_epochs, args.batch_size)
 
+
     # Create model directory
     if not os.path.exists(args.save_path):
         os.makedirs(args.save_path)
+
 
     if args.task=='Count':
         # add L2 loss
