@@ -11,7 +11,7 @@ Please refer to their website for the detailed statistics of TGIF-QA dataset.
 move features to `data/feats`.
 
 2. Second, download TGIF-QA question sets [[here]](https://github.com/YunseokJANG/tgif-qa/tree/master/dataset), 
-and move to `data/label`.
+and override `data/dataset`.
 
 3. Third, download and extract glove.42B.300d.txt [[here]](http://nlp.stanford.edu/data/glove.42B.300d.zip)
 and move to `data/Vocabulary`. Later when first execute each task, generated vocabulary files will be stored in 

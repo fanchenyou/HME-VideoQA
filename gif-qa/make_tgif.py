@@ -7,7 +7,6 @@ import random
 import h5py
 import itertools
 
-
 import pandas as pd
 from data_util import data_util
 import cPickle as pkl
@@ -24,7 +23,7 @@ TYPE_TO_CSV = {'FrameQA': 'Train_frameqa_question.csv',
                'Trans': 'Train_transition_question.csv',
                'Action' : 'Train_action_question.csv'}
 
-VIDEO_FEATURE_DIR = '/export/chenyou/.test/vqa/data/feats'
+VIDEO_FEATURE_DIR = './data/feats'
 assert_exists(VIDEO_FEATURE_DIR)
 
 eos_word = '<EOS>'
