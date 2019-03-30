@@ -26,12 +26,12 @@ We provide our pre-trained models to replicate the reported numbers in our paper
 ### Train, validate, and test
 For training and validating, execute the following command
 ~~~~
-python train.py
+python main.py
 ~~~~
 
 For testing, just add a --test=1 flag, such as
 ~~~~
-python train.py --test=1
+python main.py --test=1
 ~~~~
 
 Please modify train.py to test your own models. 

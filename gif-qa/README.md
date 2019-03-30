@@ -34,12 +34,12 @@ accuracy numbers but the difference less than 1%.
 ### Train, validate, and test
 For training and validating, to perform any of four TGIF-QA tasks, execute the following command
 ~~~~
-python train.py --task=[Count|Action|Trans|FrameQA] 
+python main.py --task=[Count|Action|Trans|FrameQA] 
 ~~~~
 
 For testing, just add a --test=1 flag, such as
 ~~~~
-python train.py --task=[Count|Action|Trans|FrameQA] --test=1
+python main.py --task=[Count|Action|Trans|FrameQA] --test=1
 ~~~~
 
 Please modify train.py to test your own models. 
