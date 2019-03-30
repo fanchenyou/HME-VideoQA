@@ -19,7 +19,7 @@ This is the PyTorch Implementation of
 ### Datasets
 TGIF-QA [[here]](https://github.com/YunseokJANG/tgif-qa)
 
-MSVD-QA MSRVTT-QA [[here]](https://github.com/xudejing/VideoQA)
+MSVD-QA [[here]](https://github.com/xudejing/VideoQA)
 
 
 ### Requirements
@@ -27,6 +27,6 @@ Python = 2.7
  
 PyTorch = 1.0 [[here]](https://pytorch.org/)
 
-GPU with 4G+ memory
+GPU training with 4G+ memory, testing with 1G+ memory.
 
 

@@ -133,32 +133,35 @@ def main():
 
             if iter % 1000==0:
                 rnn.eval()
-                
-                # val iterate over examples
+
                 with torch.no_grad():
-                    correct = 0
-                    idx = 0
-                    while dataset.has_val_example:
-                        if idx%100==0:
-                            print 'Val iter %d/%d' % (idx,dataset.val_example_total)
-                        vgg, c3d, questions, answer, question_lengths = dataset.get_val_example()
-                        data_dict = getInput(vgg, c3d, questions, None, question_lengths, False)
-                        outputs, predictions = rnn(data_dict)
-                        prediction = predictions.item()
-                        idx += 1
-                        if answerset[prediction] == answer:
-                            correct += 1
 
-                    val_acc = 1.0*correct / dataset.val_example_total
-                    print correct, dataset.val_example_total
-                    print('Val iter %d, acc %.3f' % (iter, val_acc))
-                    dataset.reset_val()
+                    # val iterate over examples
+                    if args.test == 0:
+                        correct = 0
+                        idx = 0
+                        while dataset.has_val_example:
+                            if idx % 100 == 0:
+                                print 'Val iter %d/%d' % (idx,dataset.val_example_total)
+                            vgg, c3d, questions, answer, question_lengths = dataset.get_val_example()
+                            data_dict = getInput(vgg, c3d, questions, None, question_lengths, False)
+                            outputs, predictions = rnn(data_dict)
+                            prediction = predictions.item()
+                            idx += 1
+                            if answerset[prediction] == answer:
+                                correct += 1
 
+                        val_acc = 1.0*correct / dataset.val_example_total
+                        print correct, dataset.val_example_total
+                        print('Val iter %d, acc %.3f' % (iter, val_acc))
+                        dataset.reset_val()
+                        torch.save(rnn.state_dict(), os.path.join(args.save_model_path,
+                                                                  'rnn-%04d-vl_%.3f.pkl' %(iter,val_acc)))
 
                     correct = 0
                     idx = 0
                     while dataset.has_test_example:
-                        if idx%100==0:
+                        if idx % 100 == 0:
                             print 'Test iter %d/%d' % (idx,dataset.test_example_total)
                         vgg, c3d, questions, answer, question_lengths, _ = dataset.get_test_example()
                         data_dict = getInput(vgg, c3d, questions, None, question_lengths, False)
@@ -176,7 +179,6 @@ def main():
                     if args.test == 1:
                         exit()
 
-                    torch.save(rnn.state_dict(), os.path.join(args.save_model_path, 'rnn-%04d-vl_%.3f.pkl' %(iter,val_acc)))
 
                 rnn.train()
             iter += 1
