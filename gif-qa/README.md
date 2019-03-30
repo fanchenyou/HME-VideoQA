@@ -48,7 +48,7 @@ Current we use default models we provided in previous steps.
 
 ## Quantitative Results
 
-| Model                                    | Repetition Count (L2 loss) | Repeating Action (Accuracy) | State Transition (Accuracy) | Frame QA (Accuracy) |
+| Model                                    | Repetition Count <br/> (L2 loss) | Repeating Action <br/> (Accuracy) | State Transition <br/> (Accuracy) | Frame QA <br/> (Accuracy) |
 | ---------------------------------------- | ---------------------: | --------------------------: | --------------------------: | ------------------: |               
 | ST-VQA[[10]](https://arxiv.org/abs/1704.04497)                                     |                 4.28 |                       0.608 |                       0.671 |               0.493 |
 | CO-Mem[[5]](https://arxiv.org/abs/1803.10906)                         |                 4.10 |                       0.682 |                       0.743 |               0.515 |
