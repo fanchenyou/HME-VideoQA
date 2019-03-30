@@ -1,5 +1,5 @@
 ### Heterogeneous Memory Enhanced Multimodal Attention Model for VideoQA 
-###(HME-VideoQA)
+### (HME-VideoQA)
 
 This is the PyTorch Implementation of 
 * Chenyou Fan, Xiaofan Zhang, Shu Zhang, Wensheng Wang, Chi Zhang, Heng Huang. *Heterogeneous Memory Enhanced Multimodal Attention Model for VideoQA*. In *CVPR*, 2019. 
