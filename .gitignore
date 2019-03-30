@@ -27,6 +27,7 @@ gif-qa/extract_features
 gif-qa/data/dataset/*.csv
 gif-qa/data/Vocabulary/*.txt
 gif-qa/data/feats/*.hdf5
+gif-qa/saved_models
 msvd-qa/data/msvd_qa/*.h5
 msvd-qa/saved_models
 R-unit-tests.log
