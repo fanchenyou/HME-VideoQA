@@ -27,4 +27,6 @@ Python = 2.7
  
 PyTorch = 1.0 [[here]](https://pytorch.org/)
 
+GPU with 4G+ memory
+
 
