@@ -24,6 +24,9 @@
 OK/
 gif-qa/OK
 gif-qa/extract_features
+gif-qa/dataset/*.csv
+gif-qa/Vocabulary/*.txt
+gif-qa/feat/*.h5
 R-unit-tests.log
 R/unit-tests.out
 R/cran-check.out
