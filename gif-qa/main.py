@@ -135,8 +135,6 @@ def main(args):
 
     if args.task=='Count':
 
-        best_test_loss = 100.0
-        best_test_iter = 0.0
         best_val_loss = 100.0
         best_val_iter = 0.0
 
@@ -250,11 +248,7 @@ def main(args):
                             accuracy.update(acc.item(), video_features.size(0))
 
 
-                        if best_test_loss>losses.avg:
-                            best_test_loss = losses.avg
-                            best_test_iter = iter
-
-                        print('[Test] iter %d, loss %.3f, acc %.2f, best loss %.3f at iter %d' % (iter,losses.avg,accuracy.avg,best_test_loss,best_test_iter))
+                        print('[Test] iter %d, loss %.3f, acc %.2f' % (iter,losses.avg,accuracy.avg))
                         if args.test==1:
                             exit()
 
@@ -263,9 +257,7 @@ def main(args):
             iter += 1
     
     elif args.task in ['Action','Trans']:
-        
-        best_test_acc = 0.0
-        best_test_iter = 0.0
+
         best_val_acc = 0.0
         best_val_iter = 0.0
 
@@ -383,12 +375,7 @@ def main(args):
                             losses.update(loss.item(), video_features.size(0))
                             accuracy.update(acc.item(), video_features.size(0))
 
-
-                        if best_test_acc < accuracy.avg:
-                            best_test_acc = accuracy.avg
-                            best_test_iter = iter
-
-                        print('[Test] iter %d, loss %.3f, acc %.2f, best acc %.3f at iter %d' % (iter,losses.avg,accuracy.avg,best_test_acc,best_test_iter))
+                        print('[Test] iter %d, loss %.3f, acc %.2f' % (iter,losses.avg,accuracy.avg))
                         if args.test == 1:
                             exit()
 
@@ -398,9 +385,7 @@ def main(args):
 
 
     elif args.task=='FrameQA':
-            
-        best_test_acc = 0.0
-        best_test_iter = 0.0
+
         best_val_acc = 0.0
         best_val_iter = 0.0
     
@@ -513,13 +498,8 @@ def main(args):
 
                             losses.update(loss.item(), video_features.size(0))
                             accuracy.update(acc.item(), video_features.size(0))
-            
-            
-                        if best_test_acc < accuracy.avg:
-                            best_test_acc = accuracy.avg
-                            best_test_iter = iter
 
-                        print('[Test] iter %d, loss %.3f, acc %.2f, best acc %.3f at iter %d' % (iter,losses.avg,accuracy.avg,best_test_acc,best_test_iter))
+                        print('[Test] iter %d, loss %.3f, acc %.2f' % (iter,losses.avg,accuracy))
                         if args.test==1:
                             exit()
 
