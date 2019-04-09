@@ -474,7 +474,7 @@ class AttentionTwoStream(nn.Module):
                 
             svt_tmp = torch.cat((sV_t2a,sV_t2m),dim=1)
             smq = self.mm_module_v1(svt_tmp,memory_ram_vid,memory_ram_txt,self.iter_num)
-#
+
                 
             ######################### 
             # decode the final output
