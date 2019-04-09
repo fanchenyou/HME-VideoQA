@@ -191,18 +191,10 @@ class MultiModalAttentionModule(nn.Module):
             att_vec_v = -att_vec_v
             att_vec_t = -att_vec_t
             
-        
-        #print self.Uav.data
-        #print Uhv
-        
+
         att_vec_v = torch.softmax(att_vec_v, dim=1)
         att_vec_t = torch.softmax(att_vec_t, dim=1)
-        
-#         print att_vec_v,'visual attention'
-#         print att_vec_t,'text attention'
-#         print '+++'
-        
-        #print att_vec_v,att_vec_t
+
         
         att_vec_v = att_vec_v.view(att_vec_v.size(0),att_vec_v.size(1),1) # expand att_vec from 1xT to 1xTx1 
         att_vec_t = att_vec_t.view(att_vec_t.size(0),att_vec_t.size(1),1) # expand att_vec from 1xT to 1xTx1 
@@ -222,8 +214,7 @@ class MultiModalAttentionModule(nn.Module):
         mtv =  torch.tanh(torch.cat([mv1,mt1],dim=0))
         mtv2 = torch.matmul(mtv, self.wb)
         beta = torch.softmax(mtv2,dim=0)
-        #print beta.size(),beta        
-        
+
         output = torch.tanh( torch.matmul(h,self.Whh) + beta[0] * hv_sum2 + 
                              beta[1] * ht_sum2 + self.bh )
         output = output.view(output.size(1),output.size(2))
@@ -340,7 +331,7 @@ class AttentionTwoStream(nn.Module):
             mm_oo = self.drop_keep_prob_final_att_vec(torch.tanh(self.hidden_encoder_2(mm_o2)))
         
         smq = torch.cat( (sm_q1,sm_q2), dim=1)
-        #print smq.data.grad,'===='
+
         return smq
     
     
