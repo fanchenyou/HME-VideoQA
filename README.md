@@ -3,6 +3,7 @@
 
 This is the PyTorch Implementation of 
 * Chenyou Fan, Xiaofan Zhang, Shu Zhang, Wensheng Wang, Chi Zhang, Heng Huang. *Heterogeneous Memory Enhanced Multimodal Attention Model for VideoQA*. In *CVPR*, 2019. 
+[[link]](https://arxiv.org/pdf/1904.04357.pdf)
 
  ```
 @inproceedings{fan-CVPR-2019,
