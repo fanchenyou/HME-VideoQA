@@ -14,10 +14,10 @@ This is the PyTorch Implementation of
 }
 ```
 
-Multiple-choice Task  
+###Multiple-choice Task  
 ![Task](/pics/multi-choice.png)  
 
-Open-ended Task
+###Open-ended Task
 ![Task](/pics/open-ended.png)
 
 
