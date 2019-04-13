@@ -14,6 +14,13 @@ This is the PyTorch Implementation of
 }
 ```
 
+### Multiple-choice Task
+![Task](/pics/multi-choice.png)
+
+### Open-ended Task
+![Task](/pics/open-ended.png)
+
+
 ### Architecture
 ![Network](/pics/mmnet.png)
 
