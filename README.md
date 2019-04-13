@@ -15,10 +15,10 @@ This is the PyTorch Implementation of
 ```
 
 ### Multiple-choice Task
-![Task](/pics/multi-choice.png =250x)
+![Task](/pics/multi-choice.png =300x200)
 
 ### Open-ended Task
-![Task](/pics/open-ended.png =250x)
+![Task](/pics/open-ended.png =300x200)
 
 
 ### Architecture
