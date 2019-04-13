@@ -14,8 +14,11 @@ This is the PyTorch Implementation of
 }
 ```
 
-Multiple-choice Task  Open-ended Task
-![Task](/pics/multi-choice.png)  ![Task](/pics/open-ended.png)
+Multiple-choice Task  
+![Task](/pics/multi-choice.png)  
+
+Open-ended Task
+![Task](/pics/open-ended.png)
 
 
 ### Architecture
