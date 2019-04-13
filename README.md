@@ -14,11 +14,9 @@ This is the PyTorch Implementation of
 }
 ```
 
-### Multiple-choice Task  
+### VideoQA Task  
 ![Task](/pics/multi-choice.png)  
 
-### Open-ended Task
-![Task](/pics/open-ended.png)
 
 
 ### Architecture
