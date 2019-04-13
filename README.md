@@ -15,7 +15,7 @@ This is the PyTorch Implementation of
 ```
 
 ### VideoQA Task  
-![Task](/pics/multi-choice.png)  
+![Task](/pics/task.png)  
 
 
 
