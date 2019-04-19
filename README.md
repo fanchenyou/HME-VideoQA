@@ -23,9 +23,9 @@ This is the PyTorch Implementation of
 ![Network](/pics/mmnet.png)
 
 ### Datasets
-TGIF-QA [[here]](https://github.com/YunseokJANG/tgif-qa)
+TGIF-QA, see gif-qa/
 
-MSVD-QA [[here]](https://github.com/xudejing/VideoQA)
+MSVD-QA, see msvd-qa/
 
 
 ### Requirements
