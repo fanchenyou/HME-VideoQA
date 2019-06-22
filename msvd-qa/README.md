@@ -6,6 +6,7 @@ Please cite this paper[[27]](https://www.comp.nus.edu.sg/~xiangnan/papers/mm17-v
 and consider comparing your methods with the following great work of AMU network design.
 Please refer to their website for the detailed statistics of this dataset.
 You don't need to download their features, we pack them and organize in following way.
+They also provide tools to extract VGG and C3D features from MSVD-QA and MSRVTT-QA.
 
 
 1. First, download our packed Resnet and C3D features [[here]](https://drive.google.com/file/d/1i-8kie6yEXbrR-P4mUF4YimJcHYPa7Go/view?usp=sharing),
