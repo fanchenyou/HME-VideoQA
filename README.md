@@ -27,6 +27,8 @@ TGIF-QA, see gif-qa/
 
 MSVD-QA, see msvd-qa/
 
+Youtube2text, see zh-qa/
+
 
 ### Requirements
 Python = 2.7
